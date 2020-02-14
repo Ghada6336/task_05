@@ -4,13 +4,20 @@
         <meta charset="utf-8">
         <title>List</title>
     </head>
+
     <body>
-        {% for restaurant in restaurants %}
-            <a href="#">
-                <ul>
-                    <li></li>
-                </ul>
-            </a>
-        {% endfor %}
-    </body>
+      {% for restaurant in restaurants %}
+
+                  <a href="{% url 'restaurant-detail' restaurant.id %}"><h1>{{restaurant.name}}</h1></a>
+
+
+
+
+                  <p>{{restaurant.description}}</p>
+
+
+
+          <br>
+      {% endfor %}
+      </body>
 </html>
